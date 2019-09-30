@@ -1,0 +1,157 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: gainsboro;
+}
+.body-content {
+    background-color: gainsboro;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.bg-image {
+    background-image: url(../Images/libled.jpg);
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+.bg-image-front {
+    float: right;
+    content: url(../Images/pilt.jpg);
+    margin: 0;
+    width: 600px;
+}
+
+.front-h6 {
+    font-size: 25px;
+    line-height: 30px;
+    width: 49%;
+    
+    height: 319px;
+    padding: 50px;
+    padding-top: 80px;
+}
+h2 {
+    background-color: rgb(0, 90, 161);
+    padding: 20px 40px 20px 20px;
+    width: 250px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 25px;
+    color: white;
+}
+
+
+h4 {
+    color: cornflowerblue;
+    font-size: 30px;
+}
+.navbar {
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;  
+}
+.navbar {
+    /*background-color: white;
+    /*margin-right: 260px;
+    margin-left: 360px;*/
+    border: none;
+    padding: 0;
+    position: static;
+}
+
+.form-horizontal {
+    background-color: white;
+    padding-left: 160px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+}
+
+.btn-default {
+    background-color: cornflowerblue;
+    color: black;
+}
+
+#btnBack {
+    background-color: lightgrey;
+}
+
+.navbar-image {
+    padding-top: 20px;
+    padding-right: 200px;
+    padding-left: 20px;
+    content: url(../Images/logo.svg);
+}
+
+footer {
+    margin-top: 40px;
+    background-color: rgb(55, 55, 55);
+    color: rgb(139, 139, 139);
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.footer-body ul {
+    list-style-type: none;
+    display: inline-block;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+}
+h6 {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.42857143;
+}
+h3 {
+    padding: 0;
+    margin: 0;
+}
+.table-inc{
+    width: 570px;
+    float: left;
+}
+.table-past{
+   padding-left: 50%;
+}
+.table-head {
+    background-color: rgb(0, 90, 161);
+    margin-top: 20px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.create-new-body{
+    float: left;
+    background-color: white;
+    width: 100%;
+    padding: 40px;
+}

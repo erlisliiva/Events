@@ -1,0 +1,71 @@
+﻿@model IEnumerable<RIK.Models.EventModel>
+
+
+@{
+    ViewBag.Title = "ViewEventParticipants";
+}
+<div class="bg-image">
+    <h2>
+        Osavotjad
+    </h2>
+</div>
+
+<table class="table table-eventById">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.EventName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Info)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Info)
+            </td>
+        </tr>
+    }
+</table>
+
+<table>
+
+    @foreach (var item in Model)
+    {
+
+        foreach (var person in item.GetPersonModels())
+        {
+            <td>
+                @Html.DisplayFor(modelItem => person.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => person.PersonalCode)
+            </td>
+
+        }
+    }
+</table>
+

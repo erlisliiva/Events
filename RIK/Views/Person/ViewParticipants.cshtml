@@ -1,0 +1,47 @@
+﻿@model IEnumerable<RIK.Models.PersonModel>
+
+@{
+    ViewBag.Title = "ViewParticipants";
+}
+
+<h2>ViewParticipants</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IsBusiness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayingMethod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Info)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsBusiness)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.PayingMethod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Info)
+        </td>
+    </tr>
+}
+
+</table>

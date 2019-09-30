@@ -1,0 +1,89 @@
+﻿@model IEnumerable<RIK.Models.EventModel>
+
+@{
+    ViewBag.Title = "ViewEvents";
+}
+<div class="bg-image-front">
+
+</div>
+<h2 class="front-h6">
+    Sed nect elit vestibulum, tincidunt ordi et, sagittis ex.
+    Vestibulum rutrum neque suscipit ante mattis macimus. Nulla non
+    sapien viverra, lobortis lorem non, accumisan metus.
+</h2>
+<div class="table-inc">
+    <h3 class="table-head"> Tulevased Uritused</h3>
+    <table class="table table-inc">
+
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.EventName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            if (item.StartDate > DateTime.Now)
+            {
+                <tr>
+                   
+                     
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EventName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartDate)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("OSAVOTJAD x", "ViewEventParticipants" , new { Id = item.Id })
+
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    <p class="create-new-body">
+        @Html.ActionLink("LISA URITUS", "EventCreation")
+    </p>
+</div>
+<div class="table-past">
+    <h3 class="table-head"> Toimunud Uritused</h3>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EventName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            if (item.StartDate < DateTime.Now)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EventName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartDate)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("OSAVOTJAD x", "ViewEventParticipants", new { Id = item.Id })
+                    </td>
+                </tr>
+            }
+        }
+
+
+    </table>
+</div>
+
+
