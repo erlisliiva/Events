@@ -1,12 +1,11 @@
 # Events
 TestWork
+.Net
 
-Proovitoo
+Add the functionality to View events and participants at the same time.
+Add some front-end functionality.
 
-Lisada funktsionaalsus Eventide ja selle personite vaatamiseks samas View()s.
-Lisada Front-end poole peale viimased lihvid.
-
-Andmebaasi kasutamiseks kloonida Events alla Visual Studio 2017s.
+VS 2017
 
 Project done by
 Erlis Liiva
